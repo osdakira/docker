@@ -33,6 +33,7 @@ if [ -z ${DOCKER_HOST} ]; then
     if [ -n ${SHELL_RC} ]; then
         echo "alias boot2docker='boot2docker --vm=boot2docker-vm-vboxfs'" >> ${SHELL_RC}
         echo "export DOCKER_HOST=tcp://$(boot2docker --vm=boot2docker-vm-vboxfs ip 2>/dev/null):2375" >> ${SHELL_RC}
+        echo "alias dl='docker ps -l -q'" >> ${SHELL_RC}
     fi
 fi
 
